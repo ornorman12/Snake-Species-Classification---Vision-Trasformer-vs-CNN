@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ### Source
 
-The dataset used in this project was sourced from [Kaggle]([https://www.kaggle.com/](https://www.kaggle.com/datasets/goelyash/165-different-snakes-species)), a widely used platform for datasets. It originally contained a large and diverse collection of images representing various snake species.
+The dataset used in this project was sourced from [Kaggle](https://www.kaggle.com/datasets/goelyash/165-different-snakes-species), a widely used platform for datasets. It originally contained a large and diverse collection of images representing various snake species.
 
 ### Dataset Filtering
 
