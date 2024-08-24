@@ -101,8 +101,6 @@ The following results were obtained after training and evaluating the ResNet-50 
 - **Impact of Augmentation**:
  The application of data augmentation led to mild improvements across all accuracy metrics, with a slightly better improvement compared to ViT - DINOv2.
 
-
-Overall, **ViT - DINOv2** remains the superior model in this classification task, though both models demonstrated slight performance gains with the application of data augmentation.
 ## Future Work
 
 To further improve the performance and robustness of the models, the following areas of exploration are recommended:
