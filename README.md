@@ -5,6 +5,36 @@
 
 This project aims to classify snake species using two deep learning models: **ResNet-50** and **Vision Transformer (ViT) - DINOv2**. The models are trained and evaluated on a custom dataset sourced from Kaggle, with the objective of comparing their performance in terms of accuracy and robustness, both with and without data augmentation techniques.
 
+## Models
+
+### 1. ResNet-50
+
+**ResNet-50** is a deep convolutional neural network that is part of the Residual Network (ResNet) family. Introduced by He et al. in 2015, ResNet models address the vanishing gradient problem by incorporating residual connections or "skip connections," which allow gradients to flow through the network more effectively during training.
+
+#### Key Features:
+- **Residual Connections:** The hallmark of ResNet-50 is its use of residual blocks, which help the model maintain performance as the network depth increases. This is particularly useful for training very deep networks.
+
+![Alt text](https://api.wandb.ai/files/mostafaibrahim17/images/projects/37042936/3a93c9fd.png)
+
+
+### 2. Vision Transformer (ViT) - DINOv2
+
+**Vision Transformer (ViT)** represents a shift from traditional convolutional neural networks to transformer-based architectures, originally designed for natural language processing. ViT applies the transformer model to image patches, treating them as sequences similar to words in a sentence.
+
+#### Key Features:
+- **Patch-Based Processing:** Instead of using convolutions, ViT divides images into patches and processes them as a sequence, allowing the model to capture long-range dependencies and global context.
+
+
+![Alt text](https://miro.medium.com/v2/resize:fit:1358/1*inc9Sty8xMFNNYlNVn9iBQ.png)
+### Comparison Between ResNet-50 and ViT - DINOv2
+
+Both **ResNet-50** and **ViT - DINOv2** offer distinct advantages:
+
+- **ResNet-50**: A more traditional model that excels in capturing fine-grained details through deep layers, particularly effective in scenarios where convolutional approaches have been successful.
+  
+- **ViT - DINOv2**: A modern transformer-based model that captures global image features, making it suitable for tasks that require understanding relationships across the entire image.
+
+In this project, both models were trained and evaluated to determine which architecture is more effective for the task of snake species classification.
 
 ## Installation
 
@@ -12,13 +42,14 @@ To run this project, you'll need to set up a Python environment with the necessa
 
 ```bash
 pip install -r requirements.txt
+```
 
 
 ## Dataset
 
 ### Source
 
-The dataset used in this project was sourced from [Kaggle](https://www.kaggle.com/), a widely used platform for datasets. It originally contained a large and diverse collection of images representing various snake species.
+The dataset used in this project was sourced from [Kaggle]([https://www.kaggle.com/](https://www.kaggle.com/datasets/goelyash/165-different-snakes-species)), a widely used platform for datasets. It originally contained a large and diverse collection of images representing various snake species.
 
 ### Dataset Filtering
 
@@ -68,10 +99,32 @@ The following results were obtained after training and evaluating the ResNet-50 
 - **ViT - DINOv2** consistently outperformed **ResNet-50** across all metrics. The Vision Transformer model showed a superior ability to correctly identify the true class as the top prediction (Top-1 accuracy) compared to ResNet-50.
   
 - **Impact of Augmentation**:
-  - **ResNet-50**: The application of data augmentation led to mild improvements across all accuracy metrics, with a slightly better improvement compared to ViT - DINOv2. This suggests that ResNet-50 benefits more from augmentation, likely due to its architecture.
+  - **ResNet-50**: The application of data augmentation led to mild improvements across all accuracy metrics, with a slightly better improvement compared to ViT - DINOv2. This suggests that ResNet-50 benefits more from augmentation.
   - **ViT - DINOv2**: Although the improvements were also mild, they indicate that the ViT - DINOv2 model is robust and performs well even with minor enhancements from augmentation techniques.
 
 Overall, **ViT - DINOv2** remains the superior model in this classification task, though both models demonstrated slight performance gains with the application of data augmentation.
+## Future Work
+
+To further improve the performance and robustness of the models, the following areas of exploration are recommended:
+
+### 1. Explore More Augmentation Techniques
+
+- **Diversified Augmentation Strategies:** Further experimentation with different data augmentation techniques could help in improving model performance.
+  
+- **Augmentation Tuning:** Fine-tuning the intensity and probability of existing augmentations might also yield better results, ensuring that the augmentations provide beneficial variability without distorting the data too much.
+
+### 2. Compare Larger Model Variants
+
+- **Larger ResNet Variants:** Testing larger variants of ResNet, such as ResNet-101 or ResNet-152, could offer insights into whether deeper architectures provide better performance on this classification task. These models might also respond differently to data augmentation strategies.
+  
+- **Extended Vision Transformer Models:** Similarly, experimenting with larger Vision Transformer models that have more parameters or layers could potentially enhance performance, especially in handling complex image features.
+
+### 3. Hyperparameter Tuning
+
+- **Learning Rate and Batch Size:** Further tuning of hyperparameters such as learning rate, batch size, and optimizer configurations could lead to more optimal training conditions, resulting in better model performance.
+    
+By addressing these areas, it may be possible to unlock additional performance gains and further optimize the models for the task of snake species classification.
+
 
 
 
