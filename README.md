@@ -99,8 +99,8 @@ The following results were obtained after training and evaluating the ResNet-50 
 - **ViT - DINOv2** consistently outperformed **ResNet-50** across all metrics. The Vision Transformer model showed a superior ability to correctly identify the true class as the top prediction (Top-1 accuracy) compared to ResNet-50.
   
 - **Impact of Augmentation**:
-  - **ResNet-50**: The application of data augmentation led to mild improvements across all accuracy metrics, with a slightly better improvement compared to ViT - DINOv2. This suggests that ResNet-50 benefits more from augmentation.
-  - **ViT - DINOv2**: Although the improvements were also mild, they indicate that the ViT - DINOv2 model is robust and performs well even with minor enhancements from augmentation techniques.
+ The application of data augmentation led to mild improvements across all accuracy metrics, with a slightly better improvement compared to ViT - DINOv2.
+
 
 Overall, **ViT - DINOv2** remains the superior model in this classification task, though both models demonstrated slight performance gains with the application of data augmentation.
 ## Future Work
