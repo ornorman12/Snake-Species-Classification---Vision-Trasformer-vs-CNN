@@ -5,6 +5,13 @@
 
 This project aims to classify snake species using two deep learning models: **ResNet-50** and **Vision Transformer (ViT) - DINOv2**. The models are trained and evaluated on a custom dataset sourced from Kaggle, with the objective of comparing their performance in terms of accuracy and robustness, both with and without data augmentation techniques.
 
+## Installation
+
+To run this project, you'll need to set up a Python environment with the necessary dependencies. You can install the required packages using:
+
+```bash
+pip install -r requirements.txt
+```
 ## Models
 
 ### 1. ResNet-50
@@ -35,14 +42,6 @@ Both **ResNet-50** and **ViT - DINOv2** offer distinct advantages:
 - **ViT - DINOv2**: A modern transformer-based model that captures global image features, making it suitable for tasks that require understanding relationships across the entire image.
 
 In this project, both models were trained and evaluated to determine which architecture is more effective for the task of snake species classification.
-
-## Installation
-
-To run this project, you'll need to set up a Python environment with the necessary dependencies. You can install the required packages using:
-
-```bash
-pip install -r requirements.txt
-```
 
 
 ## Dataset
